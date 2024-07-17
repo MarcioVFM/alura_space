@@ -1,0 +1,7 @@
+-venv: e um ambiente virtual para isolar as variaveis de ambiente do projeto
+-criando a venv: 'python3 -m venv venv'
+-inicializando a venv: 'venv/Scripts/activate'
+-requirements.txt: local onde fica escrito todas as dependencias do projeto
+
+-comecar projeto Django: 'django-admin startproject setup.'
+-abrir o servidor: python manage.py runserver
