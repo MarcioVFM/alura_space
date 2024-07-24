@@ -4,4 +4,32 @@
 -requirements.txt: local onde fica escrito todas as dependencias do projeto
 
 -comecar projeto Django: 'django-admin startproject setup.'
--abrir o servidor: python manage.py runserver
+-abrir o servidor: 'python manage.py runserver'
+
+-gitignore: arquivos que geralmente nao sao enviados para o github, como a 
+SECRET_KEY do django, elas ficam armazenadas no .env
+
+-app: e um pedacoo da aplicacao 
+-proojeto: e um conjunto de apps
+
+-primeiro app do projeto: galeria
+-no views da galeria podemos colocar oque sera mostrado na tela
+-para genrenciar as urls, e no setup, urls
+-porem, para nao ficar cheio de path no setup/urls, criamos o arquivo urls em cada app 
+para que fique mais organizado
+
+-criar pasta static dentro do setup
+-indicando os arquivos estaticos no settings do django:
+-STATICFILES_DIRS: onde os arquivos estaticos estao dentro da pasta(setup)
+-STATIC_ROOOT: e o caminho absotulo dos arquivos estaticos e o python ira manipulalos
+-assim configurado no settings, quando roda o comando 'python manage.py collectstatic'
+ele ira criar uma pasta no diretorio principal que se relacionara com a pasta dentro do settings
+
+-colocar no inicio dos templates {% load static%} para carregar os aquivos estaticos
+-embedar os arquivos estaticos com python {% static' ' %} aonde tiver caminhos
+
+-praticar dry - dont repeat your self
+-minimizar a repeticao de codigo
+-nos templates/imagens, criamos o base.html para colocar o codigo principal, o que fica no centro da pagina,
+repetido e carregamos ele nas outas partes
+-partes como o footer e sections criamos uma outra pasta chamada de partials e importamos ela para o base.html
